@@ -1,2 +1,19 @@
-print("Merhaba GitHub")
-print("ilk python projem ")
+password = input("Bir şifre gir: ")
+score = 0
+if len(password) >= 8:
+    score += 1
+if any(c.isupper() for c in password):
+    score += 1
+if any(c.islower() for c in password):
+    score += 1
+if any(c.isdigit() for c in password):
+    score += 1
+if any(not c.isalnum() for c in password):  
+    score += 1
+print("\n--- Sonuç ---")
+if score <= 2:
+    print(" Zayıf şifre")
+elif score <= 4:
+    print(" Orta seviye şifre")
+else:
+    print("🟢Güçlü şifre!")
