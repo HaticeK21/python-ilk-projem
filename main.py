@@ -17,3 +17,5 @@ elif score <= 4:
     print(" Orta seviye şifre")
 else:
     print("🟢Güçlü şifre!")
+print(f"Puan: {score}/5")
+
